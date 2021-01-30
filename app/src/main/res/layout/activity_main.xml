@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/holo_blue_light"
+    >
+
+    <TextView
+        android:id="@+id/CurrentWeathertextView"
+        android:layout_width="103dp"
+        android:layout_height="106dp"
+        android:fontFamily="sans-serif-black"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Current Weather                                       3 Cities in Circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209" />
+
+    <EditText
+        android:id="@+id/EnterLatitude"
+        android:layout_width="183dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Latitude"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EnterLongitude"
+        android:layout_width="183dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="Enter Longitude"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/SearchButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterLatitude"
+        app:layout_constraintVertical_bias="0.505" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="174dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="Get Weather"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/tempTextView"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:fontFamily="sans-serif-black"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Please Enter Weather"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.995"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <Switch
+        android:id="@+id/tempSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/tempTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Change Btwn °C or °F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="122dp"
+        android:layout_height="397dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/CityNameShower1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityTemperature1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/CityTemperatureImage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/CityTimeShower1"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityDateShower1"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityTempDescShower1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="110dp"
+        android:layout_height="397dp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.995">
+
+        <TextView
+            android:id="@+id/CityNameShower2"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityTemperature2"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/CityTemperatureImage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/CityTimeShower2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityDateShower2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityTempDescShower2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="125dp"
+        android:layout_height="397dp"
+        android:background="@android:color/holo_red_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/CityNameShower3"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityTemperature3"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/CityTemperatureImage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/CityTimeShower3"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityDateShower3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/CityTempDescShower3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:foregroundGravity="center"
+            android:gravity="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
